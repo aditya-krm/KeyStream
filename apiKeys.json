@@ -1,0 +1,34 @@
+{
+  "services": {
+    "linkedin-scraper": {
+      "host": "fresh-linkedin-profile-data.p.rapidapi.com",
+      "maxUsage": 100,
+      "resetFrequency": "monthly",
+      "keys": [
+        {
+          "key": "aaa10baf3emsha81570681633a38p1e8ac3jsn3d70c1308ab0",
+          "usageCount": 2,
+          "lastResetTime": "2025-04-25T16:33:05.279Z",
+          "lastUsedTime": "2025-04-25T21:50:06.056Z"
+        }
+      ]
+    },
+    "google-translate": {
+      "host": "google-translate113.p.rapidapi.com",
+      "maxUsage": 1000,
+      "resetFrequency": "monthly",
+      "keys": [
+        {
+          "key": "aaa10baf3emsha81570681633a38p1e8ac3jsn3d70c1308ab0",
+          "usageCount": 12,
+          "lastResetTime": "2025-04-25T19:10:42.473Z",
+          "lastUsedTime": "2025-04-25T21:53:42.123Z"
+        }
+      ]
+    }
+  },
+  "defaultServiceConfig": {
+    "maxUsage": 99,
+    "resetFrequency": "never"
+  }
+}

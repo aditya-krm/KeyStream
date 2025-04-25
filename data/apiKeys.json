@@ -1,0 +1,7 @@
+{
+  "services": {},
+  "defaultServiceConfig": {
+    "maxUsage": 99,
+    "resetFrequency": "never"
+  }
+}
