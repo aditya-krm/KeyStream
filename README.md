@@ -308,19 +308,174 @@ For production environments:
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to:
+We welcome contributions from the community! This section provides detailed guidelines on how to contribute to KeyStream effectively.
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/new-service`
-3. Add your changes
-4. Submit a pull request
+### Contribution Guidelines
 
-### Ideas for Contributions
+#### 1. Setting Up Your Development Environment
 
-- Add support for more RapidAPI services
-- Implement a web-based management dashboard
-- Add authentication for the API endpoints
-- Create better visualization for API key usage statistics
+1. **Fork the Repository**
+   ```bash
+   git clone https://github.com/yourusername/keystream.git
+   cd keystream
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set Up Environment Variables**
+   Create a `.env` file in the project root:
+   ```
+   PORT=3004  # Or any port you prefer
+   LOG_LEVEL=debug  # For development
+   ```
+
+4. **Add Test API Keys**
+   ```bash
+   node scripts/addApiKeys.js
+   ```
+
+#### 2. Making Changes
+
+1. **Create a Feature Branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+2. **Code Style Guidelines**
+   - Follow the existing code style and patterns
+   - Use meaningful variable and function names
+   - Add JSDoc comments for all functions
+   - Maintain a consistent code structure
+   - Use async/await pattern for asynchronous operations
+
+3. **Commit Guidelines**
+   - Use clear, descriptive commit messages
+   - Format: `[scope]: Brief description of changes`
+   - Example: `[linkedin-service]: Add company profile extraction`
+
+#### 3. Pull Request Process
+
+1. **Before Submitting a PR**
+   - Ensure all tests pass
+   - Update documentation to reflect your changes
+   - Verify your code follows the project's style guidelines
+   - Add necessary unit tests for new functionality
+
+2. **Creating a Pull Request**
+   - Provide a descriptive title and detailed description
+   - Link any related issues
+   - Explain the problem you're solving
+   - Include screenshots or examples if applicable
+
+3. **PR Review Process**
+   - Address all review comments
+   - Make requested changes and push to your branch
+   - Maintain a respectful and collaborative attitude
+
+### Testing Your Changes
+
+#### Running Tests
+
+1. **Unit Tests**
+   ```bash
+   npm test
+   ```
+
+2. **Integration Tests**
+   ```bash
+   npm run test:integration
+   ```
+
+3. **End-to-End Tests**
+   ```bash
+   npm run test:e2e
+   ```
+
+#### Testing Your Service Implementation
+
+When adding a new service or modifying an existing one:
+
+1. **Service Unit Testing**
+   ```bash
+   npm test -- --grep "YourServiceName"
+   ```
+
+2. **Manual API Testing**
+   
+   Use tools like Postman or cURL to test your endpoints:
+   ```bash
+   curl -X POST http://localhost:3004/api/your-service/endpoint \
+     -H "Content-Type: application/json" \
+     -d '{"param1": "value1"}'
+   ```
+
+3. **Load Testing**
+   ```bash
+   npm run test:load
+   ```
+
+#### Debugging
+
+1. **Enable Debug Logs**
+   Set `LOG_LEVEL=debug` in your `.env` file.
+
+2. **Using Node Inspector**
+   ```bash
+   node --inspect server.js
+   ```
+   Then open Chrome and navigate to `chrome://inspect`
+
+3. **Reviewing Application Logs**
+   Logs are stored in the `logs/` directory and follow the naming convention `application-YYYY-MM-DD.log`.
+
+### Adding a New Service
+
+To add support for a new RapidAPI service, follow these steps:
+
+1. **Create Service Files**
+   - Add a new service file in `services/` directory
+   - Create corresponding controller in `controllers/`
+   - Add routes in `routes/`
+
+2. **Implement Core Methods**
+   Your service should implement at least these methods:
+   - API endpoint handlers
+   - Service-specific data processing
+   - Error handling
+   - Response formatting
+
+3. **Test Your Implementation**
+   - Write unit tests in the `tests/` directory
+   - Manual testing with your own API keys
+   - Document usage examples
+
+4. **Update Documentation**
+   - Add your service to the "Currently Supported Services" section
+   - Document all API endpoints
+   - Include example requests and responses
+
+### Examples of Contributions
+
+Here are some ideas for contributions:
+
+- **New Services:** Add support for more RapidAPI services
+- **UI Dashboard:** Implement a web-based management dashboard
+- **Authentication:** Add user authentication system
+- **Monitoring:** Improve usage statistics and monitoring
+- **Performance:** Optimize API key rotation algorithms
+- **Documentation:** Enhance API documentation or add tutorials
+
+### Code of Conduct
+
+- Be respectful of other contributors
+- Provide constructive feedback
+- Help maintain a welcoming environment for everyone
+- Focus on the issue, not the person
+
+By following these guidelines, you'll help make KeyStream better for everyone. Thank you for your contributions!
 
 ## 📄 License
 

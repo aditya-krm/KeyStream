@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/aditya/Volume-D/Programs/works/Ventureloop/linkedin-scrape/logs/.aad73e45321f37f3449ec09f5c9ff2213eabd86b-audit.json",
+    "files": [
+        {
+            "date": 1745658178943,
+            "name": "/home/aditya/Volume-D/Programs/works/Ventureloop/linkedin-scrape/logs/application-2025-04-26.log",
+            "hash": "a4422a100537ca1bf5773493183e797cd17ad25f42add1233abb0565da2af597"
+        }
+    ],
+    "hashType": "sha256"
+}
